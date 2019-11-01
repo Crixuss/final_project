@@ -1,0 +1,125 @@
+.header {
+    padding: 40px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%
+  }
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 120px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 30px;
+  }
+  
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    padding-top: 30px;
+    padding-left: 30px;
+    top: 130px;
+    position: fixed;
+  }
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+img {
+    position: relative;
+    float: left;
+    /* width:  200px; */
+    height: 500px;
+    width: 700px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    margin-bottom: 150px;
+    margin-left: 225px;
+}
+
+/* body {
+    background: black
+ } */
+​
+h1 {
+    text-align: center;
+}
+
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+
+body {font-size:16px;}
+
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+
+.w3-half img:hover{opacity:1}
+
+.carousel-inner > .item > img {
+position: absolute;
+top: 0;
+left: 0;
+min-width: auto;
+height: 500px;
+}
+
+div.item {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 120px;
+    align-content: center;
+    padding-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(110, 110, 110);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(110, 110, 110);
+}
+
+.carousel-caption {
+    margin-top: 10px;
+}
+
+.carousel-item {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

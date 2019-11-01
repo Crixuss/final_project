@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Machine Learning for Breast Cancer Screening</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-bar-block">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="factor_analysis.html" class="w3-bar-item w3-button w3-hover-white">Factor Analysis</a> 
+    <a href="linear.html" class="w3-bar-item w3-button w3-hover-white">Linear Regression</a> 
+    <a href="logistic.html" class="w3-bar-item w3-button w3-hover-white">Logistic Regression</a> 
+    <a href="grid_search.html" class="w3-bar-item w3-button w3-hover-white">Grid Search</a>
+    <a href="nearest_neighbors.html" class="w3-bar-item w3-button w3-hover-white">Nearest Neighbors</a>  
+    <a href="deep_learning.html" class="w3-bar-item w3-button w3-hover-white">Neural Network</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Machine Learning for Breast Cancer Screening</b></h1>
+    <!-- <h1 class="w3-xxxlarge w3-text-red"><b>Machine Learning for Breast Cancer Screening</b></h1> -->
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  <!-- Content -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Data Overview</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Machine learning is an exciting dimension of artificial intelligence that can revolutionize data analytics. Applying machine learning to health data may provide insights that can be used to increase efficiency, improve health outcomes, and save lives. This dashboard examines the results of applying various well-known machine learning models to breast cancer data from University of Wisconsin, Clinical Sciences Center to determine which model was most successful predicting malignant and benign diagnoses. First the models were applied to the total dataset. After using techniques to identify the most important variables, the models were then applied to those subqueries (Factor Analysis Variables, and Random Forest Variables) to see if the score or accuracy of the model was affected.</p>
+    <h4>Key Takeaways</h4>
+    <ul>
+    <li>The most successful model was the Logistic Regression model applied to the total dataset.</li>
+    <li>The Nearest Neighbors model was consistent across all queries.</li>
+    <li>The highest grid search score was obtained using the total dataset.</li>
+    <li>Normal neural networks drastically outperformed deep neural networks with the highest score obtained using the total dataset.</li>
+    </ul>
+    <h4>Limitations</h4>
+    <ul>
+      <li>The dataset used to train the models was small, consisting of 569 rows of data.</li>
+      <li>Time; we would have liked to test and compare more queries</li>
+    </ul>
+    <embed src="output.html" style="
+    height: 500px;
+    width: 1100px;">
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
